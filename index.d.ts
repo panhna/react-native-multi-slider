@@ -6,75 +6,75 @@
 import * as React from "react";
 import { ViewStyle } from "react-native";
 
-
 export interface MarkerProps {
-    pressed: boolean;
-    pressedMarkerStyle: ViewStyle;
-    markerStyle: ViewStyle;
-    enabled: boolean;
-    currentValue: number;
-    valuePrefix: string;
-    valueSuffix: string;
+  pressed: boolean;
+  pressedMarkerStyle: ViewStyle;
+  markerStyle: ViewStyle;
+  enabled: boolean;
+  currentValue: number;
+  valuePrefix: string;
+  valueSuffix: string;
 }
 
 export interface LabelProps {
-    oneMarkerValue: string | number;
-    twoMarkerValue: string | number;
-    oneMarkerLeftPosition: number;
-    twoMarkerLeftPosition: number;
-    oneMarkerPressed: boolean;
-    twoMarkerPressed: boolean;
+  oneMarkerValue: string | number;
+  twoMarkerValue: string | number;
+  oneMarkerLeftPosition: number;
+  twoMarkerLeftPosition: number;
+  oneMarkerPressed: boolean;
+  twoMarkerPressed: boolean;
 }
 
 export interface MultiSliderProps {
-    values?: number[];
+  values?: number[];
 
-    onValuesChange?: (values: number[]) => void;
-    onValuesChangeStart?: () => void;
-    onValuesChangeFinish?: (values: number[]) => void;
+  onValuesChange?: (values: number[]) => void;
+  onValuesChangeStart?: () => void;
+  onValuesChangeFinish?: (values: number[]) => void;
 
-    sliderLength?: number;
-    touchDimensions?: {
-        height: number;
-        width: number;
-        borderRadius: number;
-        slipDisplacement: number;
-    };
+  sliderLength?: number;
+  touchDimensions?: {
+    height: number;
+    width: number;
+    borderRadius: number;
+    slipDisplacement: number;
+  };
 
-    customMarker?: React.ComponentType<MarkerProps>;
-    customMarkerLeft?: React.ComponentType<MarkerProps>;
-    customMarkerRight?: React.ComponentType<MarkerProps>;
-    customLabel?: React.ComponentType<LabelProps>;
+  customMarker?: React.ComponentType<MarkerProps>;
+  customMarkerLeft?: React.ComponentType<MarkerProps>;
+  customMarkerRight?: React.ComponentType<MarkerProps>;
+  customLabel?: React.ComponentType<LabelProps>;
 
-    isMarkersSeparated?: boolean;
+  isMarkersSeparated?: boolean;
 
-    min?: number;
-    max?: number;
-    step?: number;
+  min?: number;
+  max?: number;
+  step?: number;
 
-    optionsArray?: number[];
+  optionsArray?: number[];
 
-    containerStyle?: ViewStyle;
-    trackStyle?: ViewStyle;
-    selectedStyle?: ViewStyle;
-    unselectedStyle?: ViewStyle;
-    markerContainerStyle?: ViewStyle;
-    markerStyle?: ViewStyle;
-    pressedMarkerStyle?: ViewStyle;
-    valuePrefix?: string;
-    valueSuffix?: string;
-    enabledOne?: boolean;
-    enabledTwo?: boolean;
-    onToggleOne?: () => void;
-    onToggleTwo?: () => void;
-    allowOverlap?: boolean;
-    snapped?: boolean;
-    markerOffsetX?: number;
-    markerOffsetY?: number;
-    minMarkerOverlapDistance?: number;
-    imageBackgroundSource?: string;
-    enableLabel?: boolean;
-    vertical?: boolean;
+  containerStyle?: ViewStyle;
+  trackStyle?: ViewStyle;
+  selectedStyle?: ViewStyle;
+  unselectedStyle?: ViewStyle;
+  markerContainerStyle?: ViewStyle;
+  markerStyle?: ViewStyle;
+  pressedMarkerStyle?: ViewStyle;
+  valuePrefix?: string;
+  valueSuffix?: string;
+  enabledOne?: boolean;
+  enabledTwo?: boolean;
+  onToggleOne?: () => void;
+  onToggleTwo?: () => void;
+  allowOverlap?: boolean;
+  snapped?: boolean;
+  markerOffsetX?: number;
+  markerOffsetY?: number;
+  minMarkerOverlapDistance?: number;
+  imageBackgroundSource?: string;
+  enableLabel?: boolean;
+  vertical?: boolean;
+  isRTL?: boolean;
 }
 
 export default class MultiSlider extends React.Component<MultiSliderProps> {}
